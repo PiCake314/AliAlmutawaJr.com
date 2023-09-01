@@ -23,19 +23,20 @@ const GithubRepoLanguagesToColor: {[key: string]: string} = {
     "C++": "#f34b7d",
     "C#": "#178600",
     "Java": "#b07219",
-    "Scala": "#c22d40"
+    "Scala": "#c22d40",
+    "Dart": "#00B4AB"
 }
     
 
 
 async function getGithubData(): Promise<GithubData> {
-    const res = await fetch('https://api.github.com/users/NicholasHellmers')
+    const res = await fetch('https://api.github.com/users/PiCake314')
     const data: GithubData = await res.json()
     return data
 }
 
 async function getGithubRepos(): Promise<GithubRepo[]> {
-    const res = await fetch('https://api.github.com/users/NicholasHellmers/repos')
+    const res = await fetch('https://api.github.com/users/PiCake314/repos')
     const data: GithubRepo[] = await res.json()
     return data
 }

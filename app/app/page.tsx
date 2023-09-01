@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
       <div className='w-screen h-48 flex justify-center	items-center'>
         <div className='grid'>
-          <h1 className='text-center text-3xl'>Nicholas Hellmers</h1>
+          <h1 className='text-center text-3xl'>Ali Almutawa Jr.</h1>
           <h3 className='text-center text-2xl'>Software Engineer</h3>
         </div>
       </div>
