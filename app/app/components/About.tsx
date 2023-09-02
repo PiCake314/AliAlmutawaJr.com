@@ -6,11 +6,10 @@ export default function About() {
             About Me
         </h2>
         <p>
-            I am a software engineer with a passion for learning and creating new exciting things. I have experience with a wide range of technologies and languages, and I am always looking to learn more.
+          I am a highly skilled C++ developer with a passion for creating efficient and robust software solutions. With a strong foundation in computer science and years of hands-on experience, I'm dedicated to crafting exceptional software that meets and exceeds expectations.
         </p>
-        <p>
-            I am currently working in mastering the concepts of the uses of Golang on the web.
-        </p>
+        {/* <p>
+        </p> */}
     </div>
   )
 }

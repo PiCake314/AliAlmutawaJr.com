@@ -10,12 +10,19 @@ export default function Projects() {
 
       </div>
 
-      <div className='lg:w-[50%] m-auto grid grid-cols-1 md:grid-cols-2 justify-center gap-10 py-5 px-10'>
+      <div className='lg:w-[50%] m-auto grid grid-cols-1 md:grid-cols-1 justify-center gap-10 py-5 px-10'>
           <Project
-              name='Paraguay Supermarket Products Dataset'
-              desc='This dataset includes the name, price (in Guaranies), product url, and image url of supermarket products. The dataset counts with over 40,000 products from 2 different supermarkets in Paraguay. The data was obtained by a scraper I built using Go.'
-              project_url='https://www.kaggle.com/datasets/nikihellmers/paraguay-supermarket-products'
-              img_url='/dataset-cover.jpeg'
+              name='Mapper: A Graphics Library'
+              desc="Mapper is a graphics library written purely in C++. Its main purpose it to generate animations and render videos in a beautiful and catchy way."
+              project_url='https://github.com/PiCake314/BitMap'
+              img_url='/Mapper.png'
+          />
+
+          <Project
+              name='Monkey Code'
+              desc="This is my submission for the T9 Hackathon. It was developed in 24 hours only! It's a game that times you on your coding speed. It was built using Flutter :)."
+              project_url='https://github.com/PiCake314/MonkeyCode'
+              img_url='/Monkey.png'
           />
 
       </div>
