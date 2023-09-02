@@ -8,6 +8,8 @@ export default function About() {
         <p>
           I am a highly skilled C++ developer with a passion for creating efficient and robust software solutions. With a strong foundation in computer science and years of hands-on experience, I'm dedicated to crafting exceptional software that meets and exceeds expectations.
         </p>
+        <p>
+        </p>
     </div>
   )
 }
