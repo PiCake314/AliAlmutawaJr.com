@@ -50,7 +50,7 @@ export default async function Github() {
 
     return (
         <div className="lg:w-[50%] mx-auto py-5 leading-loose">
-            
+
             <h2 className="text-center text-2xl">My Github Summary</h2>
 
             <div className="grid col-span-1 justify-center">
