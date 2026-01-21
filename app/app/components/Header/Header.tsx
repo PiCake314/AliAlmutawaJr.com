@@ -10,10 +10,11 @@ export default function Header() {
             <li>
                 <a href="https://www.linkedin.com/in/ali-almutawa-jr-488bb1251/" target="_blank">LinkedIn</a>
             </li>
+            {/* <li>
+                <Link href="/blog"> Blog </Link>
+            </li> */}
             <li>
-                <Link href="/blog">
-                    Blog
-                </Link>
+                <a href="https://youtube.com/playlist?list=PLDHYmr2pTG4LUtPLCTp8MkSsHBAG-AJNs&si=OGTGeD5U5lcDpwbq" target="_blank">Talks</a>
             </li>
         </ul>
     </div>
