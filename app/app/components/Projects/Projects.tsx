@@ -12,6 +12,13 @@ export default function Projects() {
 
       <div className='lg:w-[50%] m-auto grid grid-cols-1 md:grid-cols-1 justify-center gap-10 py-5 px-10'>
           <Project
+              name='Pie: My Own Programming Language'
+              desc="Pie is a unique programming language developed in C++. It aims to be different yet familiar. Check out more of Pie at PieLang.org"
+              project_url='https://github.com/PiCake314/Pie'
+              img_url='/Pie.png'
+          />
+
+          <Project
               name='Mapper: A Graphics Library'
               desc="Mapper is a graphics library written purely in C++. Its main purpose it to generate animations and render videos in a beautiful and catchy way."
               project_url='https://github.com/PiCake314/BitMap'
