@@ -2,7 +2,7 @@ import Link from "next/link";
 
 // Sample blog posts data. In a real app, you can fetch this from a file or CMS.
 const posts = [
-  { id: "1", title: "Colons and Dots", image: "/images/post1.png" },
+  { id: "1", title: "The Namespace Problem", image: "/images/post1.png" },
 ];
 
 export default function Blog() {
