@@ -21,7 +21,6 @@ export default async function Post({ params }: PostProps) {
 
     return (
       <div className="max-w-3xl mx-auto p-6">
-        <h1 className="text-4xl mb-4">{id.replace(/-/g, ' ')}</h1>
         <ReactMarkdown>{fileContents}</ReactMarkdown>
       </div>
     );
