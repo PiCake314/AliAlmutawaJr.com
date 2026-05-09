@@ -20,7 +20,7 @@ export default async function Post({ params }: PostProps) {
     const fileContents = fs.readFileSync(filePath, 'utf8');
 
     return (
-      <div className="max-w-3xl mx-auto p-6 prose lg:prose-xl">
+      <div className="max-w-3xl mx-auto p-6 prose prose-invert lg:prose-xl">
         <ReactMarkdown>{fileContents}</ReactMarkdown>
       </div>
     );
