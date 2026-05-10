@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import fs from 'fs';
 import path from 'path';
@@ -10,6 +11,34 @@ type PostProps = {
     id: string;
   };
 };
+
+export async function generateMetadata({ params }: PostProps): Promise<Metadata> {
+  const { id } = params;
+
+  // 1. Path to your image (must be in /public/ folder)
+  // Example: public/blog-previews/post1.png
+  const imageUrl = `https://www.alialmutawajr.com/images/post${id}.png`;
+
+  return {
+    title: id.replace(/-/g, ' '),
+    openGraph: {
+      title: id.replace(/-/g, ' '),
+      description: 'Check out my latest blog post!',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image', // This makes the image big and clickable
+      images: [imageUrl],
+    },
+  };
+}
+
 
 export default async function Post({ params }: PostProps) {
   const { id } = params;
