@@ -1,4 +1,7 @@
-# The Namespace Problem
+---
+title: "The Namespace Problem!"
+description: "A view into a problem I encountered during the development of Pie Lang!"
+---
 
 ### Introduction: Dynamic Scoping
 Say you have a programming language where everything is a runtime value, including namespaces!
