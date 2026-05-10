@@ -25,7 +25,7 @@ printX = () => print(x);
 x = 1;
 printX();
 ```
-With the algorithm described above, this code will execute fine. However, if you move the call to `printX` before `x`'s definition, the program no longer valid.
+With the algorithm described above, this code will execute fine. However, if you move the call to `printX` before `x`'s definition, the program is no longer valid.
 This kind of behaviour is called dynamic scoping since it dynamically looks up the name of a variable,
 
 Some languages might prefer this behaviour, such as Python:
@@ -56,7 +56,7 @@ global = 2;
 ```
 An environment that had a scope tag was allowed to lookup names outside of itself. An environment that had a function tag wasn't allowed to lookup names outside of itself.
 
-This seemed like it would work on the surface, but it ended up introducing all kidns of problems, such as functions not being able to access variables defined above them since they were considered outside of it's environment.
+This seemed like it would work on the surface, but it ended up introducing all kinds of problems, such as functions not being able to access variables defined above them since they were considered outside of it's environment.
 
 I realized, since I wanted to add static scoping, the problem had to be fixed statically. 
 
@@ -79,32 +79,39 @@ This fixes the problem with the bonus that it is less convoluted to work with + 
 
 ### So, What's The Issue With Namespaces?
 
-Since namespaces in Pie are purely a runtime value, this means they may be reassigned.
+Since namespaces in Pie are purely runtime values, this means they may be reassigned:
 
 ```pie
 x = space { a = 1; };
+y = space { a = "hello"; };
 
 if input_int() == 1 {
-    x = space { a = 2; };
+    x = y;
 };
 
 use x::a;
 print(a);
 ```
-This means that a `use` declaration cannot 100% determine what ID it should mark the newly introduced name.
+This meant that a `use` declaration cannot 100% determine what ID it should mark the newly introduced name.
 
 ### What Now?
 
-The problem can't be fixed if namespaces are purely runtime. Something has to change where we can detect namespaces during static analysis.
+The problem can't be fixed if namespaces are purely runtime. Something has to change where we can detect namespaces during static analysis. Namespaces shouldn't be able to change their members during runtime. Everything inside them had to be statically known. Which means, Namespaces couldn't be regular variables.
 
-I decided to change the syntax:
+They now are their own kind of entity in the language, and to make this clear, I decided to change the syntax from this:
+```pie
+x = space {
+    a = 1;
+};
+```
+To this:
 ```pie
 space x {
     a = 1;
 };
 ```
 
-Removing the assignment from the declaration makes it clear to the user that a namespace isn't a regular variable, which is true! They're not variables. In fact, you can still have a variable with the exact same name as a namespace declared in the same scope:
+See the difference? Removing the assignment from the declaration makes it clear to the user that a namespace isn't a regular variable, which is true! In fact, you can still have a variable with the exact same name as a namespace declared in the same scope:
 
 ```pie
 space x { a = 1; };
@@ -129,6 +136,7 @@ void func() {
 }
 ```
 
+And since this new syntax doesn't allow the user to change the content of a namespace, it is impossible to fall into the problem of reassigning a namespace. Eego, no namespace problem no more!
 
 I myself think this solution is pretty neat and still aligns with Pie's design philosphy.
 
