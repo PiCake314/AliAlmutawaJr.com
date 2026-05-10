@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 // Sample blog posts data. In a real app, you can fetch this from a file or CMS.
 const posts = [
@@ -7,6 +9,9 @@ const posts = [
 
 export default function Blog() {
   return (
+    <>
+    <Header />
+
     <div className="w-full p-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         {posts.map((post) => (
@@ -21,6 +26,9 @@ export default function Blog() {
         ))}
       </div>
     </div>
+
+        <Footer />
+    </>
   );
 }
   
