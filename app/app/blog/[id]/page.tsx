@@ -49,11 +49,11 @@ export async function generateMetadata({ params }: PostProps): Promise<Metadata>
       title: id.replace(/-/g, ' '),
       description: 'Check out my latest blog post!',
       // 2. Now you can use a relative path, and Next.js handles the rest
-      images: [`/images/${id}.png`], 
+      images: [`/images/post${id}.png`], 
     },
     twitter: {
       card: 'summary_large_image',
-      images: [`/images/${id}.png`],
+      images: [`/images/post${id}.png`],
     },
   };
 }
