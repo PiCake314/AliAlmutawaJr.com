@@ -30,13 +30,13 @@ const GithubRepoLanguagesToColor: {[key: string]: string} = {
 
 
 async function getGithubData(): Promise<GithubData> {
-    const res = await fetch('https://api.github.com/users/PiCake314')
+    const res = await fetch('https://api.github.com/users/AliAlmutawaJr')
     const data: GithubData = await res.json()
     return data
 }
 
 async function getGithubRepos(): Promise<GithubRepo[]> {
-    const res = await fetch('https://api.github.com/users/PiCake314/repos')
+    const res = await fetch('https://api.github.com/users/AliAlmutawaJr/repos')
     const data: GithubRepo[] = await res.json()
     return data
 }
@@ -70,7 +70,7 @@ export default async function Github() {
 
             <div className="grid col-span-1 justify-center">
                 <div className="flex flex-col md:flex-row gap-10 justify-center items-center">
-                    <a href="https://github.com/PiCake314" target="_blank"><p>User: {githubData.login}</p></a>
+                    <a href="https://github.com/AliAlmutawaJr" target="_blank"><p>User: {githubData.login}</p></a>
                     <p>Public Repos: {githubData.public_repos}</p>
                     <p>Followers: {githubData.followers}</p>
                 </div>
@@ -93,7 +93,7 @@ export default async function Github() {
 
             <div className="text-center">
 
-                <a href="https://github.com/PiCake314?tab=repositories" target="_blank">Click Here to see more</a>
+                <a href="https://github.com/AliAlmutawaJr?tab=repositories" target="_blank">Click Here to see more</a>
 
             </div>
 

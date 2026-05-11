@@ -8,10 +8,7 @@ export default function Header() {
                 <Link href="/"> Home </Link>
             </li>
             <li>
-                <a href="https://github.com/PiCake314" target="_blank">GitHub</a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/ali-almutawa-jr-488bb1251/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/AliAlmutawaJr" target="_blank">GitHub</a>
             </li>
             <li>
                 <Link href="/blog"> Blog </Link>

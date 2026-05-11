@@ -16,7 +16,7 @@ use x::a;
 print(a);
 ```
 
-I used to have this in my language [Pie](https://github.com/PiCake314/Pie), and it worked great for a while. Until I wanted to introduce lexical scoping.
+I used to have this in my language [Pie](https://github.com/AliAlmutawaJr/Pie), and it worked great for a while. Until I wanted to introduce lexical scoping.
 
 Pie does variable lookup very naively. A stack of environments is used. Entering a scope would push a new environment, and exiting a scope would pop the top environment. The first environment in the stack represents the global environment.
 

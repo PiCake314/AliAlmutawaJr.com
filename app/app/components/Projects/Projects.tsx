@@ -14,21 +14,21 @@ export default function Projects() {
           <Project
               name='Pie: My Own Programming Language'
               desc="Pie is a unique programming language developed in C++. It aims to be different yet familiar. Check out more of Pie at PieLang.org"
-              project_url='https://github.com/PiCake314/Pie'
+              project_url='https://github.com/AliAlmutawaJr/Pie'
               img_url='/Pie.png'
           />
 
           <Project
               name='Mapper: A Graphics Library'
               desc="Mapper is a graphics library written purely in C++. Its main purpose it to generate animations and render videos in a beautiful and catchy way."
-              project_url='https://github.com/PiCake314/BitMap'
+              project_url='https://github.com/AliAlmutawaJr/BitMap'
               img_url='/Mapper.png'
           />
 
           <Project
               name='Monkey Code'
               desc="This is my submission for the T9 Hackathon. It was developed in 24 hours only! It's a game that times you on your coding speed. It was built using Flutter :)."
-              project_url='https://github.com/PiCake314/MonkeyCode'
+              project_url='https://github.com/AliAlmutawaJr/MonkeyCode'
               img_url='/Monkey.png'
           />
 
