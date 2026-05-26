@@ -150,7 +150,7 @@ a.name = "Cake"; .: `h` is mutated as well
 
 
 ### Values-as-Types:
-Inspired by TypeScript, values can be used as values in Pie:
+Inspired by TypeScript, values can be used as types in Pie:
 ```pie
 one: 1 = 1;
 greeting: "hello" = "hello";
