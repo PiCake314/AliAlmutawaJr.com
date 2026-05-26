@@ -3,6 +3,8 @@ title: "Pie's Type System!"
 description: "What happens when you add every 'cool' idea that comes to your mind?"
 ---
 
+## Introduction
+
 When declaring a new variable in Pie, you can, optionally, give a type to the variable. The declration syntax goes something like this:
 ```pie
 <name> (":" <type>)? "=" <expr>
