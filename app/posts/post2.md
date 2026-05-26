@@ -79,7 +79,9 @@ Type-checking functions consists of 2 parts:
 - Checking the return types
 
 Consider this line of Pie code:
-`func: (Int, Double): Any = (a, b: Double): String => "";`
+```pie
+func: (Int, Double): Any = (a, b: Double): String => "";
+```
 
 We're declaring the variable `func` and assigning it to a closure that takes in 2 arguments and returns an empty string.
 
