@@ -4,9 +4,13 @@ description: "What happens when you add every 'cool' idea that comes to your min
 ---
 
 When declaring a new variable in Pie, you can, optionally, give a type to the variable. The declration syntax goes something like this:
-`<name> (":" <type>)? "=" <expr>`
+```pie
+<name> (":" <type>)? "=" <expr>
+```
 More concretely:
-`x: Int = 1`
+```pie
+x: Int = 1;
+```
 If a variable is un-annotated, the type given to the variable is `Any`.
 
 But wait, what is considered a "type" in Pie?
