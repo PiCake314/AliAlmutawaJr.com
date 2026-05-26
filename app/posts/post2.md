@@ -86,9 +86,13 @@ func: (Int, Double): Any = (a, b: Double): String => "";
 We're declaring the variable `func` and assigning it to a closure that takes in 2 arguments and returns an empty string.
 
 Notice how the type annotation for `func` is different than the type of the closure itself. Realistically, the type of the closure is:
-`(Any, Double): String`
+```pie
+(Any, Double): String
+```
 Which is clearly different than:
-`(Int, Double): Any`
+```pie
+(Int, Double): Any
+```
 Yet, the assignment type-checks fine. What gives?
 
 
