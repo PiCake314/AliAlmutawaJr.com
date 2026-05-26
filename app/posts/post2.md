@@ -176,7 +176,7 @@ match s {
 Concepts is a C++20 feature that allows for placing constraints on compile-time values. They are, in a sense, very similar to Rust traits (or so I've heard).
 
 Pie adopts a similar idea. Unary predicate funtions can be used as a type. The value assigned to a variable with such type will be passed to the function. The type-checker depends on whether the function returns `true` or not.
-Example (program simplified):
+Example:
 
 ```pie
 moreThan10 = (n) => n > 10;
@@ -184,7 +184,7 @@ moreThan10 = (n) => n > 10;
 x: moreThan10 = 20; .: passes
 x = 5;              .: fails
 ```
-Concepts allow for what's know as "Design by Contract" where pre-conditions are the types of the arguments, and the post-condition is the return type.
+Concepts allow for what's known as "Design by Contract" where pre-conditions are the types of the arguments, and the post-condition is the return type.
 
 Do note that Pie is an interpreted language, so all these checks happen dynamically at runtime.
 
