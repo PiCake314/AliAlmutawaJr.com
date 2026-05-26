@@ -25,7 +25,6 @@ But wait, what is considered a "type" in Pie?
 - `Double`
 - `Int`
 - `String`
-<!-- - `Syntax` -->
 - `Type`
 
 
