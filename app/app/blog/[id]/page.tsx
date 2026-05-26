@@ -51,7 +51,7 @@ export default async function Post({ params }: PostProps) {
 
   try {
     const fileContents = fs.readFileSync(filePath, 'utf8');
-    
+
     // matter(fileContents) splits the YAML header from the actual body
     const { data, content } = matter(fileContents);
 
